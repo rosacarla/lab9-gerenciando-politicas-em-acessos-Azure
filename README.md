@@ -46,7 +46,7 @@
  <img src='images/acessos-records-management.png' width=550>  
 </p>    
 
-<p align='justify'>- A solução de privacidade Microsoft Priva ajuda em questões regulatórias, trabalha em parceria com o Purview que faz compliance. É aplicável na situação de adequação de uma empresa à LGPD no Brasil, indicando onde falta enquadramento. </p>    
+<p align='justify'>- A solução de privacidade Microsoft Priva ajuda no regulatório, trabalha em parceria com o Purview que faz compliance. É aplicável na situação de adequação de uma empresa à LGPD no Brasil, indicando onde falta enquadramento. </p>    
 
 <p align='justify'>- IMPORTANTE! Purview não é uma ferramenta de segurança porque não avisa sobre ocorrências, apenas analisa e entrega relatório da situação.</p> 
 
