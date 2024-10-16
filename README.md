@@ -1,4 +1,4 @@
-# ☁️ OTIMIZANDO CUSTOS NO AZURE
+# ☁️ GERENCIANDO POLÍTICAS EM ACESSOS AZURE
  
 <p align="center">
   <img src="https://i.postimg.cc/Gmxtwttm/azure-fundamentals.png" width="256">
@@ -7,75 +7,92 @@
 ---  
 ## ⏯️ INTRODUÇÃO  
 
-<p align='justify'>Neste laboratório do bootcamp <i>Azure Essencials</i>, foram abordadas questões referentes à otimização de custos no portal <a href='https://portal.azure.com/'><i>Microsoft Azure</i></a>. Através do projeto, foram exploradas as calculadoras (TCO, de Preços) e as tags. </p>     
+<p align='justify'>Neste laboratório do bootcamp <i>Azure Essencials</i>, foram abordadas questões referentes ao gerenciamento de políticas em acessos no portal <a href='https://portal.azure.com/'><i>Microsoft Azure</i></a>. Através do projeto, foram exploradas o Portal de Confiança do Serviço, bloqueios, portal Purview e as políticas. </p>     
 
 <p align="center">
-  <img src='images/custo1-cargas.png' width=550> 
+  <img src='' width=550> 
 </p>
 
 --- 
 ## 🗒️RESUMO DOS TÓPICOS:  
 
-<p align='justify'>- Antes de fazer a migração de cargas de trabalho para o Azure, é importante estimar os custo dessa mudança para o ambiente de cloud.</p>     
+<p align='justify'>- No Portal de Confiança do Serviço encontra-se documentação de regulamentos e certificações apresentados pela Microsoft em auditorias. Por ex., em Recursos Regionais e do Setor, para serviços financeiros, estão os recursos que elaboram diretrizes de conformidade regulatória para FSI (por país).</p>     
 
 <p align="center">
-  <img src='images/custo2-bd.png' style="display: inline-block; width: 45%;">
-  <img src='images/custo3-armazenamento-rede.png' style="display: inline-block; width: 45%;">
+  <img src=' ' style="display: inline-block; width: 45%;">
+  <img src=' ' style="display: inline-block; width: 45%;">
 </p>
 
-<p align='justify'>- Para isso, é disponibilizada a calculadora do TCO (Custo Total de Propriedade), onde são definidas as cargas de trabalho, ajustadas as suposições e exibido o relatório, sendo estimadas as cargas para uso de servidores, banco de dados, armazenamento e rede.</p> 
+<p align='justify'>- OBSERVAÇÃO: FSI é a sigla de Serviços Financeiros e, no cenário da regulamentação, refere-se a qualquer atividade que inclui intermediação de recursos financeiros, como: bancos, seguradoras, corretoras, instituições de pagamento etc..</p> 
 
 <p align="center">
-   <img src='images/custo4-ajustar-suposicoes.png  ' width=550>
+   <img src=' ' width=550>
 
-<p align='justify'>- Na etapa Ajuste de Suposições, podem ser ajustadas configurações, como ativar o Benefício Híbrido do Azure em cobertura de software (Windows e SQL Server locais) para levar licenças que o cliente já tem, assim pode receber desconto no preço estimado.</p>      
+<p align='justify'>- Na consulta detalhada de um recurso, pode ser visto o tipo de bloqueio existente e o seu escopo (o grupo de recursos que foi bloqueado para determinada ação). Para fazer qualquer alteração será necessário modificar o escopo pai.</p>      
 
 <p align="center">  
-  <img src='images/custo5-suposicoes-valores.png' width=550>
+  <img src=' ' width=550>
 </p>
 
-<p align='justify'>- O relatório exibe o valor em dólares da estimativa de economia com a migração para o Azure, gráficos comparativos de custos locais e no Azure. Pode ser usado como ferramenta de apoio para convencer um cliente que a migração para a nuvem é a melhor estratégia, considerando o camparativo de custos e a economia estimada.</p>    
+<p align='justify'>- Por exemplo, uma tentativa de usar DELETE para excluir uma rede virtual no Azure gera aviso de que o recurso está bloqueado, desde que este recurso tenha herdado o bloqueio do seu grupo de recursos. Se o bloqueio fosse SOMENTE LEITURA, a alteração para apagar seria impossível.</p>    
 <p align="center">
- <img src='images/custo6-relatorio.png' width=550>
+ <img src=' ' width=550>
 </p>
 
-<p align='justify'>- A calculadora oficial de preços do Azure, ao ser acessada, mostra uma mensagem para fazer login que é um acesso fechado e privilegiado para empresas grandes, que têm contrato diretamente com a Microsoft, passando a usufruir de benefícios concedidos pelo modelo de contrato, como descontos em serviços e consultas especiais no portal.</p>     
+<p align='justify'>- O recurso Purview, apesar de aparentemente disponível, precisa ser criado (criar uma conta de usuário, usando review + create) e administrado. Com a conta criada, deve-se clicar no nome do usuário para acessar o portal do Purview.</p>     
 
 <p align="center">
-  <img src='images/custo9-calculadora-azure.png' width=550>
+  <img src=' ' width=550>
 </p>
 
-<p align='justify'>- No cálculo do custo de uma VM há diferenças significativas entre o preço original (mantendo as configurações sugeridas no portal), preço com Benefício Híbrido do Azure e o preço com o mesmo Benefício com reserva por 3 anos.</p>    
+<p align='justify'>- O portal do Purview oferece segurança, governança e compliance aos dados, provenientes do Microsoft 365, Azure, Microsoft Fabric e outras plataformas de nuvem. Oferece soluções de: plataforma, risco e compliance, governança de dados, segurança de dados, privacidade e recursos.</p>    
 
 <p align="center">
-  <img src='images/custo11-comparacao-vm.png' width=550> 
+  <img src=' ' width=550> 
 </p>
 
-<p align='justify'>- No cálculo de VM ligada por 12 horas em 26 dias do mês, o preço mensal cairia para US$ 29,95. O ideal é calcular o preço de todo o ambiente de nuvem pretendido, não somente de um dos recursos.</p>    
+<p align='justify'>- Por exemplo, o recurso de gerenciamento de gravações e outras soluções de compliance são liberados conforme o tipo de assinatura do Azure, na versão experimental para assinante de Microsoft 365 E 5 Compliance em teste por 90 dias  ou upgrade completo para Microsoft 365 E 5.</p>    
 
 <p align="center">
-   <img src='images/custo10-simula-preco-vm.png' style="display: inline-block; width: 45%;">
-  <img src='images/custo7-grafico-linhas.png ' style="display: inline-block; width: 45%;">
+   <img src=' ' style="display: inline-block; width: 45%;">
+  <img src=' ' style="display: inline-block; width: 45%;">
 </p>
 
-<p align='justify'>- Com o Cost Management + Billing, pode se obter uma visão geral do ambiente e se há alerta de custo, um orçamento pré-determinado, também faz recomendações do advisor para sugerir melhorias relacionadas a custo. </p>    
+<p align='justify'>- A solução de privacidade Microsoft Priva ajuda em questões regulatórias, trabalha em parceria com o Purview que faz compliance. É aplicável na situação de adequação de uma empresa à LGPD no Brasil, indicando onde falta enquadramento. </p>    
 
 <p align="center">
- <img src='images/custo12-cost-management.png' width=550>  
+ <img src='' width=550>  
 </p>    
 
-<p align='justify'>- A funcionalidade TAG pode ser atribuída opcionalmente a um grupo de recursos, mas não é herdada pelos recursos dentro do grupo. </p> 
+<p align='justify'>- IMPORTANTE! Purview não é uma ferramenta de segurança porque não avisa sobre ocorrências, apenas analisa e entrega relatório da situação.</p> 
 
 <p align="center">
- <img src='images/custo13-tags.png' width=550>  
+ <img src=' ' width=550>  
 </p> 
 
-<p align='justify'>- Em Policy, pode ser criada uma condição para que só seja criado um recurso se tiver uma tag.</p> 
+<p align='justify'>- As políticas são formas de padronização. As regiões permitidas definem as políticas e são apenas 6 (Brazil, Brazil South, Brasil Southeast, Brazil US, East US, East US 2). Existe possíbilidade de criar políticas personalizadas utilizando como templates alguma política próxima da necessidade do interessado. </p> 
 
 <p align="center">
-  <img src='images/custo14-tags-policy.png' width=550>
+  <img src=' ' width=550>
 </p>
 
+<p align='justify'>- Caso a política seja criada já tendo recursos em qualquer outro lugar, não se terá 100% de compliance, havendo desatendimento, por manter a política criada sem possibilidade de alterar política já existente. </p> 
+
+<p align="center">
+  <img src=' ' width=550>
+</p>
+
+<p align='justify'>- Ao criar uma política no Azure, por padrão, já está selecionada a opção habilitada. Sendo uma situação de teste ou momento inadequado para aplicar a política, pode ser selecinada a opção desabilitada. </p>   
+
+<p align="center">
+  <img src=' ' width=550>
+</p>  
+
+<p align='justify'>- A política é aplicada para gestão e padronização de recursos, independe do tipo de permissão de quem tenta manusear os recursos. </p>  
+
+<p align="center">
+  <img src=' ' width=550>
+</p>  
 
 ---    
 ## ✍️ AUTORA    
@@ -91,8 +108,9 @@ Contato: rosa.carla@pucpr.edu.br
 ---  
 ## 🔗 LINKS ÚTEIS  
 
-- [Calculadora do TCO (Custo Total de Propriedade)](https://azure.microsoft.com/pt-br/pricing/tco/calculator/)
-- [Calculadora de preço](https://azure.microsoft.com/pt-br/pricing/calculator/?ef_id=_k_EAIaIQobChMI3MTmoaT4iAMVIVZIAB1qnSF0EAAYASAAEgLgiPD_BwE_k_&OCID=AIDcmmzmnb0182_SEM__k_EAIaIQobChMI3MTmoaT4iAMVIVZIAB1qnSF0EAAYASAAEgLgiPD_BwE_k_&gad_source=1&gclid=EAIaIQobChMI3MTmoaT4iAMVIVZIAB1qnSF0EAAYASAAEgLgiPD_BwE)
-- [Use marcas para organizar os recursos do Azure e a hierarquia de gerenciamento](https://learn.microsoft.com/pt-br/azure/azure-resource-manager/management/tag-resources)
+- [Portal de Confiança do Serviço](https://servicetrust.microsoft.com/)
+- [Bloquear seus recursos para proteger sua infraestrutura](https://learn.microsoft.com/pt-br/azure/azure-resource-manager/management/lock-resources?tabs=json)
+- [Saiba mais sobre o Microsoft Purview](https://learn.microsoft.com/pt-br/purview/purview)
+- [Documentação do Azure Policy](https://learn.microsoft.com/pt-br/azure/governance/policy/)
   
 ---
