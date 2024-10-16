@@ -18,9 +18,9 @@
   <img src='images/acessos-srevicetrust.png' width=550> 
 </p>  
 
-<p align='justify'>- OBSERVAÇÃO: FSI é a sigla de Serviços Financeiros e, no cenário da regulamentação, refere-se a qualquer atividade que inclui intermediação de recursos financeiros, como: bancos, seguradoras, corretoras, instituições de pagamento etc.</p>   
+<p align='justify'>- OBSERVAÇÃO: FSI é a sigla de Serviços Financeiros e, no cenário da regulamentação, refere-se a qualquer atividade que inclui intermediação de recursos financeiros (bancos, seguradoras, corretoras, instituições de pagamento etc.).</p>   
 
-<p align='justify'>- Na consulta detalhada de um recurso, pode ser visto o tipo de bloqueio existente e o seu escopo (o grupo de recursos que foi bloqueado para determinada ação). Para fazer qualquer alteração será necessário modificar o escopo pai.</p>      
+<p align='justify'>- Na consulta detalhada de recurso, pode ser visto o bloqueio existente e o seu escopo (o grupo de recursos que foi bloqueado para determinada ação). Para fazer qualquer alteração será necessário modificar o escopo pai.</p>      
 
 <p align="center">  
   <img src='images/acesso-bloqueio-resource-group.png' width=550>
@@ -28,7 +28,7 @@
 
 <p align='justify'>- Por exemplo, uma tentativa de usar DELETE para excluir uma rede virtual no Azure gera aviso de que o recurso está bloqueado, desde que este recurso tenha herdado o bloqueio do seu grupo de recursos. Se o bloqueio fosse SOMENTE LEITURA, a alteração para apagar seria impossível.</p>  
 
-<p align='justify'>- O recurso Purview, apesar de aparentemente disponível, precisa ser criado (criar uma conta de usuário, usando review + create) e administrado. Com a conta criada, deve-se clicar no nome do usuário para acessar o portal do Purview.</p>     
+<p align='justify'>- O recurso Purview, apesar de aparentemente disponível, precisa ser criado (criar conta de usuário, usando review + create) e administrado. Com a conta criada, deve-se clicar no nome do usuário para acessar o portal do Purview.</p>     
 
 <p align="center">
   <img src='images/acessos-ms-purview.png' width=550>
